@@ -13,6 +13,7 @@ class AddForm(FlaskForm):
 class SignUpForm(FlaskForm):
     email_address = StringField('Email Address', [DataRequired()])
     first_name = StringField('First Name', [DataRequired()])
+    last_name = StringField('Last Name', [DataRequired()])
     password1 = PasswordField('Password', [DataRequired()])
     password2 = PasswordField('Password confirm', [DataRequired(), EqualTo('password1', 'Passwords must match')])
     submit = SubmitField('Sign Up')
